@@ -1,0 +1,4 @@
+gunicorn==19.6.0
+oauth==1.0.1
+oauthlib==1.1.2
+wordcloud==1.2.1
