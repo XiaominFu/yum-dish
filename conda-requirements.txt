@@ -1,11 +1,6 @@
 scipy
 numpy
 pandas
-scikit-learn
-nltk
-spacy
-matplotlib
-seaborn
 bokeh
 dill
 flask
