@@ -8,20 +8,23 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+		<div class=page>
+		  <h1>Stock price plot</h1>
+		  <div class=metanav>
+		    <h4>
+		    	Please enter a stock label.
+		    </h4>
 
-		<div>
-		  <h1>Word Cloud 1</h1>
-		  <div>
-		  	<img src="{{ url_for('static',filename='npm.png') }}" alt="Figure 1"/>  
+		    <form id='stock_label_form' method='post' action='index' >
+		      <p>
+		    Enter stock label: <input type='text' name='stock_label' />
+		      </p>
+		      <p>
+		    <input type='submit' value='Submit_label' />
+		      </p>
+		    </form>
+
 		  </div>
 		</div>
-		
-		<div>
-		  <h1>Word Cloud 2</h1>
-		  <div>
-		  	<img src="{{ url_for('static',filename='npm.png') }}" alt="Figure 2"/>
-		  </div>
-		</div>
-
 	</body>
 </html>
