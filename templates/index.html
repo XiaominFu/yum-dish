@@ -9,18 +9,25 @@
 	</head>
 	<body>
 
-		<div>
-		  <h1>Word Cloud 1</h1>
-		  <div>
-		  	<img src="{{ url_for('static',filename='npm.png') }}" alt="Figure 1"/>  
-		  </div>
+		<div class="container">
+
+		<div class="row">
+			<div class="col-md-12"><h2 class="text-center">Yelp reviews of a Chinese restaurant</h2></div>
 		</div>
-		
-		<div>
-		  <h1>Word Cloud 2</h1>
-		  <div>
-		  	<img src="{{ url_for('static',filename='npm.png') }}" alt="Figure 2"/>
-		  </div>
+
+
+		<div class="row">
+
+		<div class="col-md-6">
+		<h4 class="text-center">Graph 1. Positive reviews (star rating more than 4)</h4>
+		<img src="{{ url_for('static',filename='review_good.png') }}" class="img-responsive" alt="Figure 1"/>  
+		</div>
+
+		<div class="col-md-6">
+		<h4 class="text-center">Graph 2. Negative reviews (star rating less than 3)</h4>
+		<img src="{{ url_for('static',filename='review_bad.png') }}" class="img-responsive" alt="Figure 2"/>
+		</div>
+
 		</div>
 
 	</body>
