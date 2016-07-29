@@ -20,7 +20,9 @@ murmurhash==0.26.4
 nltk==3.2.1
 oauth==1.0.1
 oauthlib==1.1.2
-plac==0.9.1
+Pillow==3.3.0
+plac==0.9.6
+plotly==1.12.4
 preshed==0.46.4
 pyparsing==2.1.4
 python-dateutil==2.5.3
@@ -29,11 +31,11 @@ PyYAML==3.11
 requests==2.10.0
 scikit-learn==0.17.1
 seaborn==0.7.0
-semver==2.4.1
+semver==2.6.0
 simplejson==3.8.2
 singledispatch==3.4.0.3
 six==1.10.0
-spacy==0.100.7
+spacy==0.101.0
 sputnik==0.9.3
 thinc==5.0.8
 tornado==4.3

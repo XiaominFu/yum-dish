@@ -11,22 +11,94 @@
 
 		<div class="container">
 
+
 		<div class="row">
-			<div class="col-md-12"><h2 class="text-center">Yelp reviews of a Chinese restaurant</h2></div>
+			<div class="col-md-12 text-center">
+				<h3>Part 1. Bad restaurants or critical users? An analysis of user clusters in Yelp reviews</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-8">
+				Number of reviews: 1,244,839 <br>
+				Number of restaurants:  19,737 (in 6 US cities)<br>
+				Number of users: 325,714 (with at least 2 reviews) <br>
+				Data size: 1.04 GB
+			</div>
 		</div>
 
 
 		<div class="row">
 
 		<div class="col-md-6">
-		<h4 class="text-center">Graph 1. Positive reviews (star rating more than 4)</h4>
-		<img src="{{ url_for('static',filename='review_good.png') }}" class="img-responsive" alt="Figure 1"/>  
+		<img src="{{ url_for('static',filename='boxplot1.png') }}" class="img-responsive" alt="boxplot1"/>  
 		</div>
 
 		<div class="col-md-6">
-		<h4 class="text-center">Graph 2. Negative reviews (star rating less than 3)</h4>
-		<img src="{{ url_for('static',filename='review_bad.png') }}" class="img-responsive" alt="Figure 2"/>
+		<img src="{{ url_for('static',filename='boxplot2.png') }}" class="img-responsive" alt="boxplot2"/>
 		</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h5>Takeaway: Restaurants with low ratings are disproportionately reviewed by critical users.</h5>
+				<p>Critical users either: <br>
+				(1) tend to give lower ratings compared with average users (for the same service), or <br>
+				(2) are more likely to write reviews when encountering bad experiences.</p>
+				<h5>Next steps:</h5>
+				<p> 1. Slice data by city<br>
+					2. Slice data by restaurant category<br>
+				    3. Repeat analysis for other countries</p>				
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h3>Part 2. Visualizing Yelp reviews of a Chinese restaurant</h3>
+				<p> Restaurant rating: 4.0 <br>
+				    Number of reviews: 279 <br>
+				    Time period: 2013-2015 </p>
+			</div>
+		</div>
+
+
+		<div class="row">
+
+		<div class="col-md-6">
+		<h4 class="text-center">Positive reviews (star rating more than 4)</h4>
+		<img src="{{ url_for('static',filename='review_good.png') }}" class="img-responsive center-block" alt="Wordcloud positive"/>  
+		</div>
+
+		<div class="col-md-6">
+		<h4 class="text-center">Negative reviews (star rating less than 3)</h4>
+		<img src="{{ url_for('static',filename='review_bad.png') }}" class="img-responsive center-block" alt="Wordcloud negative"/>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-12">
+			<h4 class="text-center">Foods at a glance: review mention frequency, average star rating</h4>
+			<img src="{{ url_for('static',filename='barchart.png') }}" class="img-responsive center-block" alt="barchart"/>  
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h5>Tools used:</h5>
+				<p>Python, SpaCy, WordCloud, Matplotlib, Flask, Heroku</p>
+				<h5>Next steps:</h5>
+				<p> 1. Link clickable bars to corresponding review texts<br>
+					2. Show frequently-used descriptive words when hovering over bars<br>
+					3. Take user input of food names (can be N-grams)<br>
+				    4. Make restaurants searchable by name and location</p>				
+			</div>
+		</div>
+
+		<hr>
 
 		</div>
 
