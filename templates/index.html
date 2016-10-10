@@ -39,7 +39,7 @@
                 <li><a href="#predict">Prediction</a></li>
                 <li><a href="#visual">Visualization</a></li>
                 <li><a href="https://www.yelp.com/dataset_challenge">Data</a></li>
-                <li><a href="https://github.com/XiaominFu?tab=repositories">Code</a></li>
+                <li><a href="https://github.com/XiaominFu/yum-dish">Code</a></li>
                 <li><a href="https://www.linkedin.com/in/xiaomin-fu-309b021a">Contact</a></li>
               </ul>
             </div><!--/.nav-collapse -->
@@ -103,7 +103,7 @@
         <div class="col-md-4">
           <h2>Prediction</h2>
           <p>How much are restaurant ratings affected by the clustering of critical users? Can it be explained by users' economic status and restaurants' price range? Predictive modeling has something to offer.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="#predict" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
           <h2>Visualization</h2>
@@ -183,6 +183,61 @@
 		<P> &nbsp;
 		<hr>
 
+    <!-- Prediction
+    ====================== -->
+
+    <div class="container" id="predict">
+
+    <P> &nbsp;
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Predicting Yelp ratings using Decision Tree</h3>
+      </div>
+    </div>
+
+    <P> &nbsp;
+
+    <div class="row">
+      <div class="col-md-12">
+      <img src="{{ url_for('static',filename='tree_var_imp.png') }}" class="img-responsive center-block" alt="tree_var_imp"/>  
+      </div>
+    </div>
+
+    <P> &nbsp;
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Results</h3>
+            </div>
+            <div class="panel-body">
+              <b>(1) Users' criticalness (i.e. Average Stars) and the price range of a restaurant have similar explanatory power.</b> <br>
+              (2) The total number of reviews is a strong predictor of restaurant ratings.<br>
+              (3) Location (i.e. State dummies) is also a predictor of restaurant ratings, but not as strong as the previous three features.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Decision Tree Regression Algorithm</h3>
+            </div>
+            <div class="panel-body">
+               Features: Review Count, Price Range, User Average Stars, State<br>
+               Best parameters found by GridSearchCV:<br>
+               &nbsp; &nbsp; max_depth=34, min_samples_leaf=37, min_samples_split=3 <br>
+               R^2 of the prediction: 0.51348<br>
+               Data: (same as above)
+            </div>
+          </div>
+        </div>
+    </div>
+  </div> <!-- /container id="predict" -->
+
+    <P> &nbsp;
+    <hr>
+
     <!-- Visualization
     ====================== -->
 
@@ -211,7 +266,9 @@
               <h3 class="panel-title">Tools</h3>
             </div>
             <div class="panel-body">
-              Python, SpaCy, WordCloud, Matplotlib, Flask, Heroku
+              Data Analysis: Python, pandas, scikit-learn, SpaCy<br>
+              Visualization: Matplotlib<br>
+              Web Development: Flask, Bootstrap, Heroku
             </div>
           </div>
         </div>
